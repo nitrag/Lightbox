@@ -34,7 +34,7 @@ open class FooterView: UIView {
     return view
     }()
 
-  let gradientColors = [UIColor(hex: "040404").alpha(0.1), UIColor(hex: "040404")]
+  let gradientColors = [UIColor(hex: "040404"), UIColor(hex: "040404")]
   open weak var delegate: FooterViewDelegate?
 
   // MARK: - Initializers
