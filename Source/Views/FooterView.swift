@@ -43,7 +43,7 @@ open class FooterView: UIView {
     super.init(frame: CGRect.zero)
 
     backgroundColor = UIColor.clear
-    if(!LightboxConfig.InfoLabel.gradientDisabled){
+    if !LightboxConfig.InfoLabel.gradientDisabled {
       _ = addGradientLayer(gradientColors)
     }
 
@@ -110,9 +110,9 @@ extension FooterView: InfoLabelDelegate {
 
   public func infoLabel(_ infoLabel: InfoLabel, didExpand expanded: Bool) {
     resetFrames()
-    if(expanded) {
+    if expanded {
         _ = removeGradientLayer()
-    }else if(!LightboxConfig.InfoLabel.gradientDisabled){
+    } else if !LightboxConfig.InfoLabel.gradientDisabled {
         _ = addGradientLayer(gradientColors)
     }
     delegate?.footerView(self, didExpand: expanded)
